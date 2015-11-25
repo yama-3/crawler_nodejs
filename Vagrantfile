@@ -67,5 +67,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y nodejs npm
+    sudo ln -s `which nodejs` /usr/bin/node
+    npm install casperjs
   SHELL
 end
