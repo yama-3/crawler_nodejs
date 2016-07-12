@@ -1,23 +1,32 @@
 
 var casper = require("casper").create();
-var url = "";
-var list = [];
+var url = casper.cli.get("url");
+
+function f1() {
+    var elements = document.querySelectorAll("li");
+    return Array.prototype.map.call(elements, function(e) {
+	return e.textContent;
+    });
+}
+
+function f2() {
+    var element = document.querySelector("strong");
+    return element.textContent;
+}
 
 casper.start(url, function() {
     this.echo(this.getTitle());
 });
 
 casper.then(function() {
-    list = this.evaluate(function() {
-	var elements = document.querySelectorAll("li");
-	return Array.prototype.map.call(elements, function(e) {
-	    return e.textContent;
-	});
-    });
+    var list = this.evaluate(f1);
+    this.echo(list);
 });
 
-casper.run(function() {
-    this.echo(list.length);
-    this.echo(' - ' + list.join('\n - ')).exit();
+casper.then(function() {
+    var text = this.evaluate(f2);
+    this.echo(text);
 });
+
+casper.run();
 
