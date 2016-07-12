@@ -1,0 +1,20 @@
+{
+    "name": "crawler_nodejs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+	"first": "casperjs first.js",
+	"test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+	"type": "git",
+	"url": "git+https://github.com/yama-3/crawler_nodejs.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+	"url": "https://github.com/yama-3/crawler_nodejs/issues"
+    },
+    "homepage": "https://github.com/yama-3/crawler_nodejs#readme"
+}
