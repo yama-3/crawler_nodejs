@@ -3,9 +3,12 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "bin": "./node_modules/.bin/",
     "scripts": {
 	"first": "casperjs first.js",
-	"test": "echo \"Error: no test specified\" && exit 1"
+	"save_json": "casperjs save_json.js",
+	"test": "echo \"Error: no test specified\" && exit 1",
+	"a": "echo \"Error: no test specified\""
     },
     "repository": {
 	"type": "git",

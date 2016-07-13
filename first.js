@@ -1,5 +1,6 @@
 
 var casper = require("casper").create();
+
 var url = casper.cli.get("url");
 
 function f1() {
