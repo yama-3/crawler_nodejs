@@ -14,6 +14,10 @@
 	"type": "git",
 	"url": "git+https://github.com/yama-3/crawler_nodejs.git"
     },
+    "dependencies" : {
+	"casperjs": "latest",
+	"phantomjs": "latest"
+    },
     "author": "",
     "license": "ISC",
     "bugs": {
