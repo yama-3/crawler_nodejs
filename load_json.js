@@ -10,4 +10,6 @@ casper.echo(hoge["hoge"]);
 casper.echo(hoge.hoge);
 casper.echo(hoge_obj.hoge);
 
-casper.exit();
+casper.start("about:blank");
+casper.run();
+

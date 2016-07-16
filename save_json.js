@@ -1,5 +1,8 @@
 
-var casper = require("casper").create();
+var casper = require("casper").create({
+	verbose: true,
+	logLevel: "debug"
+    });
 var fs = require("fs");
 
 var data = {
@@ -10,9 +13,7 @@ var data = {
 
 fs.write('hoge.json', JSON.stringify(data, null, '    '), 'w');
 
-casper.start();
+casper.start("about:blank");
 
 casper.run();
-
-casper.exti(0);
 
