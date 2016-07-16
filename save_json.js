@@ -12,8 +12,7 @@ fs.write('hoge.json', JSON.stringify(data, null, '    '), 'w');
 
 casper.start();
 
-casper.run(function() {
-    this.exit(0);
-});
+casper.run();
 
+casper.exti(0);
 

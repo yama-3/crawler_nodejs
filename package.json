@@ -7,8 +7,8 @@
     "scripts": {
 	"first": "casperjs first.js",
 	"save_json": "casperjs save_json.js",
-	"test": "echo \"Error: no test specified\" && exit 1",
-	"a": "echo \"Error: no test specified\""
+	"load_json": "casperjs load_json.js",
+	"test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
 	"type": "git",
