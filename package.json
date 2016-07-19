@@ -8,6 +8,7 @@
 	"first": "casperjs first.js",
 	"save_json": "casperjs save_json.js",
 	"load_json": "casperjs load_json.js",
+	"capture_page": "casperjs capture_page.js",
 	"test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
