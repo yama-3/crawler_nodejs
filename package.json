@@ -5,6 +5,8 @@
     "main": "index.js",
     "bin": "./node_modules/.bin/",
     "scripts": {
+    	"call_casperjs_from_node": "node call_casperjs_from_node.js", 
+
 	"first": "casperjs first.js",
 	"save_json": "casperjs save_json.js",
 	"load_json": "casperjs load_json.js",
@@ -17,7 +19,8 @@
     },
     "dependencies" : {
 	"casperjs": "latest",
-	"phantomjs": "latest"
+	"phantomjs": "latest",
+	"spooky": "latest"
     },
     "author": "",
     "license": "ISC",
