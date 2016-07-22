@@ -6,6 +6,7 @@
     "bin": "./node_modules/.bin/",
     "scripts": {
     	"call_casperjs_from_node": "node call_casperjs_from_node.js", 
+	"redis": "node redis.js",
 
 	"first": "casperjs first.js",
 	"save_json": "casperjs save_json.js",
