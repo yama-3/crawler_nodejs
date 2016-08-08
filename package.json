@@ -21,6 +21,7 @@
     "dependencies" : {
 	"casperjs": "latest",
 	"phantomjs": "latest",
+	"redis": "latest",
 	"spooky": "latest"
     },
     "author": "",
