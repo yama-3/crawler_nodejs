@@ -5,6 +5,7 @@
     "main": "index.js",
     "bin": "./node_modules/.bin/",
     "scripts": {
+	"spooky_dom": "node spooky_dom.js",
     	"call_casperjs_from_node": "node call_casperjs_from_node.js", 
 	"redis": "node redis.js",
 
@@ -22,7 +23,8 @@
 	"casperjs": "latest",
 	"phantomjs": "latest",
 	"redis": "latest",
-	"spooky": "latest"
+	"spooky": "latest",
+	"cheerio": "latest"
     },
     "author": "",
     "license": "ISC",
