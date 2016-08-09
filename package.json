@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "bin": {
-	"casperjs":  "./node_modules/.bin/casperjs1",
+	"casperjs":  "./node_modules/.bin/casperjs",
 	"phantomjs": "./node_modules/.bin/phantomjs"
     },
     "scripts": {
