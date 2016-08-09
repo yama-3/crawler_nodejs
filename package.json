@@ -3,7 +3,10 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "bin": "./node_modules/.bin/",
+    "bin": {
+	"casperjs":  "./node_modules/.bin/casperjs1",
+	"phantomjs": "./node_modules/.bin/phantomjs"
+    },
     "scripts": {
 	"spooky_dom": "node spooky_dom.js",
     	"call_casperjs_from_node": "node call_casperjs_from_node.js", 
