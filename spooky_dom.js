@@ -19,15 +19,6 @@ var spookyCallback = function (err) {
 	throw e;
     }
 	
-    spooky.start(URL);
-    spooky.then(function() {
-	var html = this.evaluate(function() {
-	    return document.documentElement.outerHTML;
-	});
-	this.emit('html', html);
-    });
-    spooky.run();
-
     spooky.on('html', htmlFunc);
     spooky.on('log', function(log) {
 	if (log.space === 'remote') {
@@ -37,6 +28,20 @@ var spookyCallback = function (err) {
     spooky.on('console', function (line) {
 	console.log(line);
     });
+
+    spooky.start(URL);
+    spooky.then(function() {
+	var html = this.evaluate(function() {
+	    return document.documentElement.outerHTML;
+	});
+	this.emit('html', html);
+    });
+    spooky.then(function() {
+	this.capture('hoge1.png');
+	this.captureSelector('hoge2.png', '#content2')
+    });
+    spooky.run();
+
 };
 
 var options = {child: { transport: 'http' }, casper: { logLevel: 'debug', verbose: true }}
