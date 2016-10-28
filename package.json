@@ -12,7 +12,6 @@
     	"call_casperjs_from_node": "node call_casperjs_from_node.js", 
 	"redis": "node redis.js",
 
-	"first": "casperjs first.js",
 	"save_json": "casperjs save_json.js",
 	"load_json": "casperjs load_json.js",
 	"capture_page": "casperjs capture_page.js",
@@ -24,7 +23,7 @@
     },
     "dependencies" : {
 	"casperjs": "latest",
-	"phantomjs": "latest",
+	"phantomjs-prebuilt": "latest",
 	"redis": "latest",
 	"spooky": "latest",
 	"cheerio": "latest"
