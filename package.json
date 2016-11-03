@@ -8,6 +8,8 @@
 	"phantomjs": "./node_modules/.bin/phantomjs"
     },
     "scripts": {
+    	"start": "node ./bin/www",
+
 	"spooky_dom": "node spooky_dom.js",
     	"call_casperjs_from_node": "node call_casperjs_from_node.js", 
 	"redis": "node redis.js",
@@ -26,7 +28,15 @@
 	"phantomjs-prebuilt": "latest",
 	"redis": "latest",
 	"spooky": "latest",
-	"cheerio": "latest"
+	"cheerio": "latest",
+
+	"body-parser": "~1.15.2",
+	"cookie-parser": "~1.4.3",
+	"debug": "~2.2.0",
+	"express": "~4.14.0",
+	"jade": "~1.11.0",
+	"morgan": "~1.7.0",
+	"serve-favicon": "~2.3.0"
     },
     "author": "",
     "license": "ISC",
