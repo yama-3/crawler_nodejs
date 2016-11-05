@@ -1,47 +1,46 @@
 {
-    "name": "crawler_nodejs",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "bin": {
-	"casperjs":  "./node_modules/.bin/casperjs",
-	"phantomjs": "./node_modules/.bin/phantomjs"
-    },
-    "scripts": {
-    	"start": "node ./bin/www",
-
-	"spooky_dom": "node spooky_dom.js",
-    	"call_casperjs_from_node": "node call_casperjs_from_node.js", 
-	"redis": "node redis.js",
-
-	"save_json": "casperjs save_json.js",
-	"load_json": "casperjs load_json.js",
-	"capture_page": "casperjs capture_page.js",
-	"test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-	"type": "git",
-	"url": "git+https://github.com/yama-3/crawler_nodejs.git"
-    },
-    "dependencies" : {
-	"casperjs": "latest",
-	"phantomjs-prebuilt": "latest",
-	"redis": "latest",
-	"spooky": "latest",
-	"cheerio": "latest",
-
-	"body-parser": "~1.15.2",
-	"cookie-parser": "~1.4.3",
-	"debug": "~2.2.0",
-	"express": "~4.14.0",
-	"jade": "~1.11.0",
-	"morgan": "~1.7.0",
-	"serve-favicon": "~2.3.0"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-	"url": "https://github.com/yama-3/crawler_nodejs/issues"
-    },
-    "homepage": "https://github.com/yama-3/crawler_nodejs#readme"
+  "name": "crawler_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "casperjs":  "./node_modules/.bin/casperjs",
+    "phantomjs": "./node_modules/.bin/phantomjs",
+    "mocha":     "./node_modules/.bin/mocha"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "spooky_dom": "node spooky_dom.js",
+    "call_casperjs_from_node": "node call_casperjs_from_node.js",
+    "redis": "node redis.js",
+    "save_json": "casperjs save_json.js",
+    "load_json": "casperjs load_json.js",
+    "capture_page": "casperjs capture_page.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yama-3/crawler_nodejs.git"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "casperjs": "latest",
+    "cheerio": "latest",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "jade": "~1.11.0",
+    "mocha": "^3.1.2",
+    "morgan": "~1.7.0",
+    "phantomjs-prebuilt": "latest",
+    "redis": "latest",
+    "serve-favicon": "~2.3.0",
+    "spooky": "latest"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yama-3/crawler_nodejs/issues"
+  },
+  "homepage": "https://github.com/yama-3/crawler_nodejs#readme"
 }
