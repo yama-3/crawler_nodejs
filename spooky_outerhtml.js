@@ -28,12 +28,6 @@ var callback = function (err) {
 	});
 	this.emit('html', html);
     });
-    /*
-    spooky.then(function() {
-	this.capture('hoge1.png');
-	this.captureSelector('hoge2.png', '#content2')
-    });
-    */
     spooky.run();
 };
 

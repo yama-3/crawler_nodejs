@@ -11,6 +11,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "spooky_dom": "node spooky_dom.js",
+    "spooky_capture": "node spooky_capture_app.js",
     "call_casperjs_from_node": "node call_casperjs_from_node.js",
     "redis": "node redis.js",
     "save_json": "casperjs save_json.js",
