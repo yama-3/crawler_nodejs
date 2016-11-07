@@ -3,7 +3,9 @@ var Spooky = require('spooky');
 var spookyCapture = {
     url: 'about:blank',
     elementSelector: '',
-    imageFile: 'spookyCapture.png'
+    imageFile: 'spookyCapture.png',
+    viewportWidth: 1024,
+    viewportHeight: 1280
 };
 
 var captureFunc = function() {
@@ -27,16 +29,12 @@ var callback = function (err) {
     spooky.on('log', function(log) { if (log.space === 'remote') { console.log(line); } });
     spooky.on('console', function (line) { console.log(line); });
 
-    console.log(spookyCapture.url);
-    console.log(spookyCapture.elementSelector);
-    console.log(spookyCapture.imageFile);
-
     spooky.start(spookyCapture.url);
     var param = {
 	imageFile: spookyCapture.imageFile,
 	elementSelector: spookyCapture.elementSelector, 
-	viewport_width: 1024,
-	viewport_height: 1280
+	viewport_width: spookyCapture.viewportWidth,
+	viewport_height: spookyCapture.viewportHeight
     };
     spooky.then([param, function() {
 	if (!elementSelector) {
