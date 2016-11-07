@@ -1,11 +1,10 @@
-var Spooky = require('spooky');
 var cheerio = require('cheerio');
+var spookyOuterhtml = require('./spooky_outerhtml');
 
-var url = process.argv[2];             // 'http://cs.crosswarp.com/wf/hoge/test/DomPage';
-var elementSelector = process.argv[3]; //'#content2 li';
+var url = process.argv[2];
+var elementSelector = process.argv[3];
 
-var htmlFunc = function(html) {
-    //console.log(html);
+spookyOuterhtml.htmlFunc = function(html) {
     console.log(html);
     $ = cheerio.load(html);
     $(elementSelector).each(function(i, elm) {
@@ -14,41 +13,4 @@ var htmlFunc = function(html) {
     });
 };
 
-var spookyCallback = function (err) {
-    if (err) {
-	e = new Error('Failed to initialize SpookyJS');
-	e.details = err;
-	throw e;
-    }
-	
-    spooky.on('html', htmlFunc);
-    spooky.on('log', function(log) {
-	if (log.space === 'remote') {
-	    console.log(line);
-	}
-    });
-    spooky.on('console', function (line) {
-	console.log(line);
-    });
-
-    spooky.start(url);
-    spooky.then(function() {
-	var html = this.evaluate(function() {
-	    return document.documentElement.outerHTML;
-	});
-	
-	this.emit('html', html);
-    });
-    /*
-    spooky.then(function() {
-	this.capture('hoge1.png');
-	this.captureSelector('hoge2.png', '#content2')
-    });
-    */
-    spooky.run();
-};
-
-var options = {child: { transport: 'http' }, casper: { logLevel: 'debug', verbose: true }}
-var spooky = new Spooky(options, spookyCallback);
-
-
+spookyOuterhtml.run(url);
