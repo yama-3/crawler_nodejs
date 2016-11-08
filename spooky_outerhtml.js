@@ -10,7 +10,7 @@ var callback = function (err) {
 	e.details = err;
 	throw e;
     }
-	
+    spooky.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36");
     spooky.on('html', spookyOuterhtml.htmlFunc);
     spooky.on('log', function(log) {
 	if (log.space === 'remote') {
