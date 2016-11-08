@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "casperjs":  "./node_modules/.bin/casperjs",
+    "casperjs": "./node_modules/.bin/casperjs",
     "phantomjs": "./node_modules/.bin/phantomjs",
-    "mocha":     "./node_modules/.bin/mocha"
+    "mocha": "./node_modules/.bin/mocha"
   },
   "scripts": {
     "start": "node ./bin/www",
@@ -33,9 +33,12 @@
     "jade": "~1.11.0",
     "mocha": "^3.1.2",
     "morgan": "~1.7.0",
+    "npm-install-missing": "^0.1.4",
     "phantomjs-prebuilt": "latest",
     "redis": "latest",
     "serve-favicon": "~2.3.0",
+    "sleep": "^4.0.0",
+    "sleep-async": "^1.0.1",
     "spooky": "latest"
   },
   "author": "",
