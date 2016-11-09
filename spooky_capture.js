@@ -25,6 +25,8 @@ var callback = function (err) {
 	throw e;
     }
 
+    spooky.userAgent("Mozilla/5.0 (iPhone; CPU iPhone OS 10_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0 Mobile/14B72 Safari/602.1");
+
     spooky.once('capture', captureFunc);
     spooky.on('log', function(log) { if (log.space === 'remote') { console.log(line); } });
     spooky.on('console', function (line) { console.log(line); });
